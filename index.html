@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>form validation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="form__fields">
+      
+      <label for="name">Ф.И.О</label><br>
+      <input 
+        type="text" 
+        id="name" 
+        data-name="name"
+        onkeyup="ruLetters(this)"
+      ><br>
+    
+      <label for="birthDay">Дата рождения</label><br>
+      <input 
+        type="date" 
+        id="birthDay" 
+        data-birthday="birthDay"
+        required pattern="\d{4}-\d{2}-\d{2}"
+      ><br>
+    
+      <label for="address">Адрес</label><br>
+      <input 
+        type="text" 
+        id="address" 
+        data-address="address"
+        onkeyup="ruLetters(this)"
+      ><br>
+
+      <button onclick="submit()">Отправить</button>
+    </div>
+
+    <div class="alert-desk"><p></p></div>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
